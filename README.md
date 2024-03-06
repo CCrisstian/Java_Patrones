@@ -37,3 +37,19 @@
 -  `Strategy`. Define una familia de algoritmos, encapsula uno de ellos y los hace intercambiables. Permite que un algoritmo varíe independientemente de los clientes que lo usan.
 -  `Template Method`. Define en una operación el esqueleto de un algoritmo, delegando en las subclases algunos de sus pasos. Permite que las subclases redefinan ciertos pasos del algoritmo sin cambiar su estructura.
 -  `Visitor`. Representa una operación sobre los elementos de una estructura de objetos. Permite definir una nueva operación sin cambiar las clases de los elementos sobre los que opera.
+
+<h2 align="center">Singleton</h2>
+<p>El patrón de diseño <b>'Singleton'</b> es un patrón creacional que garantiza que una clase tenga solo una instancia y proporciona un punto de acceso global a esa instancia. Se utiliza cuando se quiere controlar el acceso a una única instancia de una clase y cuando esa instancia debe ser compartida entre múltiples partes del código.</p>
+<p>Características del <b>'Singleton'</b>:</p>
+
+-  <b>Constructor Privado</b>: El constructor de la clase es privado para evitar instanciaciones directas desde fuera de la clase.
+-  <b>'Variable Estática Privada'</b>: Contiene la única instancia de la clase y se declara como estática y privada para que sea accesible solo desde métodos estáticos de la propia clase.
+-  <b>'Método Estático de Acceso'</b>: Proporciona un método estático que actúa como punto de acceso global a la única instancia de la clase. Este método crea la instancia si aún no existe, o devuelve la instancia existente.
+
+<p>Notas Importantes:</p>
+
+-  <b>'Inicialización Perezosa (Lazy Initialization')</b>: La implementación mostrada utiliza inicialización perezosa, creando la instancia solo cuando se solicita por primera vez. También es posible utilizar inicialización inmediata (eager initialization) si la instancia debe crearse al cargar la clase.
+-  <b>'Seguridad en Hilos (Thread Safety)'</b>: La implementación presentada no es segura para hilos. Si la aplicación es multihilo, se deben agregar mecanismos de sincronización para garantizar que la creación de la instancia sea segura en entornos concurrentes.
+-  <b>'Enum Singleton'</b>: A partir de Java 5, también puedes implementar el Singleton utilizando un enum, que proporciona una implementación segura para hilos y evita problemas relacionados con la serialización y la reflexión.
+
+<p>El patrón <b>'Singleton'</b> es ampliamente utilizado para garantizar que solo haya una instancia de una clase en toda la aplicación, lo que puede ser útil para gestionar recursos compartidos y reducir la duplicación de instancias.</p>
