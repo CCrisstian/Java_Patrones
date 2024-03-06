@@ -39,6 +39,7 @@
 -  `Visitor`. Representa una operación sobre los elementos de una estructura de objetos. Permite definir una nueva operación sin cambiar las clases de los elementos sobre los que opera.
 
 <h2 align="center">Singleton</h2>
+<p align="center"><img width="500" alt="image" src="https://github.com/CCrisstian/Java_Patrones_de_Dise-o/assets/111469216/fac65c76-7d7e-4c6e-af52-936660b9666b"></p>
 <p>El patrón de diseño <b>'Singleton'</b> es un patrón creacional que garantiza que una clase tenga solo una instancia y proporciona un punto de acceso global a esa instancia. Se utiliza cuando se quiere controlar el acceso a una única instancia de una clase y cuando esa instancia debe ser compartida entre múltiples partes del código.</p>
 <p>Características del <b>'Singleton'</b>:</p>
 
@@ -46,6 +47,19 @@
 -  <b>'Variable Estática Privada'</b>: Contiene la única instancia de la clase y se declara como estática y privada para que sea accesible solo desde métodos estáticos de la propia clase.
 -  <b>'Método Estático de Acceso'</b>: Proporciona un método estático que actúa como punto de acceso global a la única instancia de la clase. Este método crea la instancia si aún no existe, o devuelve la instancia existente.
 
+```java
+public class Singleton {
+    private static final Singleton INSTANCE = new Singleton();
+
+    // El constructor privado no permite que se genere un constructor por defecto.
+    // (con mismo modificador de acceso que la definición de la clase) 
+    private Singleton() {}
+
+    public static Singleton getInstance() {
+        return INSTANCE;
+    }
+}
+```
 <p>Notas Importantes:</p>
 
 -  <b>'Inicialización Perezosa (Lazy Initialization')</b>: La implementación mostrada utiliza inicialización perezosa, creando la instancia solo cuando se solicita por primera vez. También es posible utilizar inicialización inmediata (eager initialization) si la instancia debe crearse al cargar la clase.
@@ -53,3 +67,13 @@
 -  <b>'Enum Singleton'</b>: A partir de Java 5, también puedes implementar el Singleton utilizando un enum, que proporciona una implementación segura para hilos y evita problemas relacionados con la serialización y la reflexión.
 
 <p>El patrón <b>'Singleton'</b> es ampliamente utilizado para garantizar que solo haya una instancia de una clase en toda la aplicación, lo que puede ser útil para gestionar recursos compartidos y reducir la duplicación de instancias.</p>
+
+<h2 align="center">Abstract Factory</h2>
+<p>El patrón <b>'Abstract Factory'</b> es un patrón creacional que proporciona una interfaz para crear familias de objetos relacionados o dependientes sin especificar sus clases concretas. Permite la creación de objetos relacionados sin especificar sus clases concretas, promoviendo así la independencia entre el cliente y las clases de implementación.</p>
+<p align="center"><img width="800" alt="image" src="https://github.com/CCrisstian/Java_Patrones_de_Dise-o/assets/111469216/588dee39-1904-42b3-99fd-cfdb50cc4251"></p>
+<p>Componentes clave del patrón <b>'Abstract Factory'</b>:</p>
+
+-  `AbstractFactory`: Define una interfaz para operaciones que crean objetos `AbstractProducts`.
+-  `ConcreteFactory`: Implementa las operaciones para crear objetos `ConcreteProducts`.
+-  `Abstract Product`: Define una interfaz para un tipo de objeto `Product`.
+-  `Concrete Product`: Define un objeto `Product` el cual es creado por el correspondiente `ConcreteFactory`, e implementa la interfaz de `AbstractProduct`.
