@@ -10,7 +10,7 @@ public class Concrete_Factory_PizzeriaNewYork extends Abstract_Factory_PizzeriaZ
 /*---------------MÉTODOS---------------*/
     @Override
     Abstract_Product_Pizza crearPizza(String tipo) {
-        Abstract_Product_Pizza pizza = null;
+        Abstract_Product_Pizza pizza;
         tipo = tipo.toLowerCase();
         pizza = switch (tipo) {
             case "vegetariana" -> new Concrete_Product_PizzaNY_Vegetariana();
