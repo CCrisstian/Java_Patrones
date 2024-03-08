@@ -80,6 +80,7 @@ public class Singleton {
 
 <h2 align="center">Decorator</h2>
 <p>El patrón <b>'Decorator'</b> es un patrón de diseño estructural que permite agregar nuevas funcionalidades a las clases sin modificar su estructura1. Este patrón se utiliza para agregar de forma dinámica nuevo comportamiento o funcionalidades a la clase principal.</p>
+<p align="center"><img width="800" alt="image" src="https://github.com/CCrisstian/Java_Patrones_de_Dise-o/assets/111469216/da991fef-26e2-4f89-ba7c-974e489ab127"></p>
 
 Las partes principales del patrón `Decorator` son:
 
