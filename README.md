@@ -84,7 +84,7 @@ public class Singleton {
 
 Las partes principales del patrón `Decorator` son:
 
--  `Component Interface`: Es la interfaz que define la funcionalidad y de la cual se hereda la clase concreta y los decoradores.
--  `Concrete Component`: Es la implementación principal y cuya clase recibirá los decoradores para agregar funcionalidad extra dinámicamente.
--  `Decorator`: Puede ser una clase abstracta o no que define el Decorador que hereda de la interfaz Component y de la cual luego se crearán todos los demás decoradores. El decorador debe mantener la referencia al objeto original a fin de invocarlo y luego agregarle otras funcionalidades propias del decorador.
--  `Concrete Decorator`: Son las clases que extienden o implementan el Decorator con la funcionalidad acotada.
+-  `Componente`: Deﬁne la interfaz para los objetos que pueden tener responsabilidades añadidas.
+-  `Componente Concreto`: Deﬁne un objeto al cual se le pueden agregar responsabilidades adicionales.
+-  `Decorador`: Mantiene una referencia al componente asociado. Implementa la interfaz de la superclase Componente delegando en el componente asociado.
+-  `Decorador Concreto`: Añade responsabilidades al componente.
