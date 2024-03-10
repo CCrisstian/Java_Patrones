@@ -77,3 +77,14 @@ public class Singleton {
 -  `ConcreteFactory`: Implementa las operaciones para crear objetos `ConcreteProducts`.
 -  `Abstract Product`: Define una interfaz para un tipo de objeto `Product`.
 -  `Concrete Product`: Define un objeto `Product` el cual es creado por el correspondiente `ConcreteFactory`, e implementa la interfaz de `AbstractProduct`.
+
+<h2 align="center">Decorator</h2>
+<p>El patrón <b>'Decorator'</b> es un patrón de diseño estructural que permite agregar nuevas funcionalidades a las clases sin modificar su estructura1. Este patrón se utiliza para agregar de forma dinámica nuevo comportamiento o funcionalidades a la clase principal.</p>
+<p align="center"><img width="800" alt="image" src="https://github.com/CCrisstian/Java_Patrones_de_Dise-o/assets/111469216/a8525c50-941d-42af-9607-49b7e4b386f6"></p>
+
+Las partes principales del patrón `Decorator` son:
+
+-  `Componente`: Deﬁne la interfaz para los objetos que pueden tener responsabilidades añadidas.
+-  `Componente Concreto`: Deﬁne un objeto al cual se le pueden agregar responsabilidades adicionales.
+-  `Decorador`: Mantiene una referencia al componente asociado. Implementa la interfaz de la superclase Componente delegando en el componente asociado.
+-  `Decorador Concreto`: Añade responsabilidades al componente.
