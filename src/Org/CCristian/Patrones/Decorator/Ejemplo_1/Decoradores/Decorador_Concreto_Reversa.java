@@ -1,11 +1,11 @@
-package Org.CCristian.Patrones.Decorator.Decoradores;
+package Org.CCristian.Patrones.Decorator.Ejemplo_1.Decoradores;
 
-import Org.CCristian.Patrones.Decorator.Componentes.Componente_Formateable;
+import Org.CCristian.Patrones.Decorator.Ejemplo_1.Componentes.Componente_Formateable;
 
-public class Decorador_Concreto_ReversaDecorador extends Decorador_TextoDecorador{
+public class Decorador_Concreto_Reversa extends Decorador_TextoDecorador{
 
 /*-------------CONSTRUCTOR-------------*/
-    public Decorador_Concreto_ReversaDecorador(Componente_Formateable texto) {
+    public Decorador_Concreto_Reversa(Componente_Formateable texto) {
         super(texto);
     }
 /*-------------MÉTODOS-------------*/

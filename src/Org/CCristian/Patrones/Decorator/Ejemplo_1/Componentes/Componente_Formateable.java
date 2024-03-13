@@ -1,4 +1,4 @@
-package Org.CCristian.Patrones.Decorator.Componentes;
+package Org.CCristian.Patrones.Decorator.Ejemplo_1.Componentes;
 
 public interface Componente_Formateable {
 

@@ -1,6 +1,6 @@
-package Org.CCristian.Patrones.Decorator.Decoradores;
+package Org.CCristian.Patrones.Decorator.Ejemplo_1.Decoradores;
 
-import Org.CCristian.Patrones.Decorator.Componentes.Componente_Formateable;
+import Org.CCristian.Patrones.Decorator.Ejemplo_1.Componentes.Componente_Formateable;
 
 abstract public class Decorador_TextoDecorador implements Componente_Formateable {
 
