@@ -88,3 +88,40 @@ Las partes principales del patrón `Decorator` son:
 -  `Componente Concreto`: Deﬁne un objeto al cual se le pueden agregar responsabilidades adicionales.
 -  `Decorador`: Mantiene una referencia al componente asociado. Implementa la interfaz de la superclase Componente delegando en el componente asociado.
 -  `Decorador Concreto`: Añade responsabilidades al componente.
+
+<h2 align="center">Composite</h2>
+<p>El patrón <b>'Composite'</b> sirve para construir objetos complejos a partir de otros más simples y similares entre sí, gracias a la composición <b>'recursiva'</b> y a una estructura en forma de árbol.</p>
+<p>El patrón de diseño <b>'Composite'</b> es un patrón estructural que permite a los clientes tratar a objetos individuales y a composiciones de objetos de manera uniforme. Este patrón compone objetos en estructuras de árbol para representar jerarquías parte-todo. El objetivo principal es tratar tanto a objetos individuales como a composiciones de objetos de la misma manera.</p>
+<p align="center"><img width="800" alt="image" src="https://github.com/CCrisstian/Java_Patrones_de_Dise-o/assets/111469216/22b0732a-ed5c-4d9a-8153-c039cc986f61"></p>
+
+-    `Component`:
+        -    Define la interfaz para los objetos en la composición.
+        -    Implementa el comportamiento por defecto para la interfaz común de todas la clases.
+        -    Define la interfaz para acceder y manejar sus componentes hijos.
+-    `Leaf`:
+        -    Representa objetos hojas o simples en la composición. Un objeto simple no tiene hijos.
+        -    Define el comportamiento para objetos primitivos en la composición.
+-    `Composite`:
+        -    Define el comportamiento para los componentes que tienen hijos.
+        -    Almacena los componentes hijos.
+        -    Implementa operaciones definidas en la interfaz del `Component`.
+-    `Client`:
+        -    Manipula objetos en la composición a través del `Component`.
+ 
+<h2 align="center">Observer</h2>
+<p>Define una dependencia uno-a-muchos entre objetos de modo que cuando un objeto cambia el estado, todos sus dependientes son notificados y actualizados automáticamente.</p>
+<p align="center"><img width="800" alt="image" src="https://github.com/CCrisstian/Java_Patrones_de_Dise-o/assets/111469216/b5ee9f8d-70b5-43b0-a0eb-2e30fcbb833a"></p>
+
+-    `Subject`:
+        -    Conoce sus `Observers`.
+        -    Cualquier número de objetos `Observers` pueden observar a un mismo `Subject`.
+        -    Provee una interfaz para agregar y remover objetos `Observers`.
+-    `ConcreteSubject`:
+        -    Almacena el estado de interés para los objetos `ConcreteObservers`.
+        -    Envía una notificación a sus observadores cuando cambia su estado.
+-    `Observer`:
+        -    Define una interfaz de actualización para los objetos que son notificados de los cambios en el `Subject`.
+-    `ConcreteObserver`:
+        -    Mantiene una referencia a un objeto `ConcreteSubject`.
+        -    Almacena el estado que lo mantiene consistente con el estado del `Subject`.
+        -    Implementa la interfaz de actualización del `Observer` para mantener su estado consistente con el estado del `Subject`.
