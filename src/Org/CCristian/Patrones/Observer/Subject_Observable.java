@@ -16,8 +16,12 @@ abstract public class Subject_Observable {
     }
 
     public void notifyObservers(){
+        notifyObservers(null);
+    }
+
+    public void notifyObservers(Object object){
         for (Observer observer: this.observers){
-            observer.update(this);
+            observer.update(this, object);
         }
     }
 }

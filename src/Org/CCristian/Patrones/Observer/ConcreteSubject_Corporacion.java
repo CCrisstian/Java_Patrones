@@ -20,9 +20,14 @@ public class ConcreteSubject_Corporacion extends Subject_Observable {
     public int getPrecio() {
         return precio;
     }
-    /*--------------MÉTODOS--------------*/
+/*--------------MÉTODOS--------------*/
     public void modificarPrecio(int precio){
         this.precio = precio;
         notifyObservers();
+    }
+
+    @Override
+    public String toString() {
+        return getNombre() + " nuevo precio $" + getPrecio();
     }
 }
